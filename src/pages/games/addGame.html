@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Spiel hinzufügen</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary" stacked>HomeTeam</ion-label>
+            <ion-select [(ngModel)]="homeTeam">
+                <ion-option *ngFor="let team of teams" [value]="team">{{team.getName()}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>GuestTeam</ion-label>
+            <ion-select [(ngModel)]="guestTeam">
+                <ion-option *ngFor="let team of teams" [value]="team">{{team.getName()}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Anstoss</ion-label>
+            <ion-datetime displayFormat="DD MMM YYYY HH mm" pickerFormat="DD MMM YYYY HH mm" [(ngModel)]="kickoff"></ion-datetime>
+          </ion-item>
+    </ion-list>
+    <div>
+        <button ion-button (click)="addGame($event)">Spiel hinzufügen</button>
+    </div>
+</ion-content>

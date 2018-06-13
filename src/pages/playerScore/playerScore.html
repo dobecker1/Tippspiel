@@ -1,0 +1,27 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Tabelle</ion-title>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+        <ion-list inset>
+            <ion-list-header class="scoreHeader">
+                <div>Aktueller Punktestand</div>
+            </ion-list-header>
+            <ion-item class="scoreItem">
+                <div class="playerDiv" style="display:flex">
+                    <div class="playerNumber">Pos.</div> <div class="playerName">Spielername</div>  <div class="playerPoints">Punkte</div>
+                </div>
+            </ion-item>
+            <ion-item ion-item class="playerItem" *ngFor="let player of players; let i = index">
+                <div class="playerDiv" style="display:flex">
+                <div class="playerNumber">{{i + 1}}.</div> <div class="playerName">{{player.name}}</div>  <div class="playerPoints">{{player.player.getPoints()}}</div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>

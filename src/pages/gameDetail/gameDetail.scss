@@ -1,0 +1,71 @@
+.edit-icon {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.gameFont {
+    display: flex;
+    font-size: 1.5em !important;
+    margin-bottom: 5px;
+}
+
+.tippBtn {
+    margin-left: 20px;
+    margin-top: 20px;
+    bottom: 10px;
+    background-color: #2ab947 !important;
+}
+
+.goal-input {
+    max-width: 30px;
+}
+#home_select{
+    width: 100px;
+}
+#guest_select{
+    width: 100px;
+}
+#undefined{
+    height: 0px;
+    width: 0px;
+}
+.flag-icon-home{
+    margin-right: 10px;
+    font-size: 2em;
+}
+.flag-icon-guest{
+    margin-left: 10px;
+    font-size: 2em;
+}
+.homeTeam{
+    margin-left: 10px;
+    width: 140px;
+}
+.guestTeam{
+    margin-left: 10px;
+}
+
+.playerTipps {
+    display: flex;
+}
+
+.playerTipps > div {
+    font-size: 2rem;
+}
+
+.gameCard {
+    background-color: #d2ffb4 !important;
+}
+
+.playerTippsItem {
+    background-color: #d2ffb4 !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 579px;
+}
+
+.scoreHeader {
+    background-color: #d2ffb4 !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

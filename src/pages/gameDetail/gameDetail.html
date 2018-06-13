@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Game</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-card class="gameCard">
+      <ion-card-content>
+          <div class="gameFont" style="display: flex">
+            <span [ngClass]="game.getHome().getFlag()" class="flag-icon flag-icon-home middleContainers"></span>
+            <div class="homeTeam middleContainers">{{game.getHome().getName()}}</div>
+              <div *ngIf="tippMode" style="display:flex" class="middleContainers">
+                <ion-select [(ngModel)]="homeGoals" id="home_select">
+                  <ion-option value="0">0</ion-option>
+                  <ion-option value="1">1</ion-option>
+                  <ion-option value="2">2</ion-option>
+                  <ion-option value="3">3</ion-option>
+                  <ion-option value="4">4</ion-option>
+                </ion-select>
+              </div>
+              <div *ngIf="!tippMode" style="display:flex" class="middleContainers"> 
+                {{homeGoals}}
+              </div>
+          </div>
+          <div class="gameFont"> 
+              <span [ngClass]="game.getGuest().getFlag()" class="flag-icon flag-icon-home middleContainers"></span>
+              <div class="homeTeam middleContainers">{{game.getGuest().getName()}}</div>
+              <div *ngIf="!tippMode" style="display:flex" class="middleContainers">
+                {{guestGoals}}
+              </div>
+              <div *ngIf="tippMode" style="display:flex">
+                  <ion-select [(ngModel)]="guestGoals" id="guest_select">
+                    <ion-option value="0">0</ion-option>
+                    <ion-option value="1">1</ion-option>
+                    <ion-option value="2">2</ion-option>
+                    <ion-option value="3">3</ion-option>
+                    <ion-option value="4">4</ion-option>
+                  </ion-select>
+              </div>
+          </div>
+        <!--<p class="gameFont"><span class="flag-icon flag-icon-de"></span>   {{game.home}}  <ion-input class="goal-input" placeholder="0"></ion-input> : <ion-input placeholder="1"></ion-input>  {{game.guest}}   <span class="flag-icon flag-icon-es"></span></p>-->
+        <!--<button ion-button round icon-only> <i class="material-icons edit-icon">mode_edit</i> </button>-->
+        <button *ngIf="!started" id="btnTipp" class="tippBtn" ion-button (click)="tippGame()">{{tippBtnName}}</button>
+        <button *ngIf="admin" id="btnEdit" class="tippBtn" ion-button (click)="editGame()">{{editBtnName}}</button>
+      </ion-card-content>
+    </ion-card>
+    <ion-list *ngIf="started">
+      <ion-item class="playerTippsItem" ion-item *ngFor="let tipp of playerTipps">
+        <div class="playerTipps">
+          <div class="playerName">{{tipp.name}}    </div>
+          <div>{{tipp.tipp.getGoalsHome()}}</div>
+          <div>:</div>
+          <div>{{tipp.tipp.getGoalsGuest()}}</div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>

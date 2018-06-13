@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Team hinzufügen</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary" stacked>Mannschat eingeben</ion-label>
+            <ion-input [(ngModel)]="team" placeholder="Mannschaft"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label color="primary" stacked>Flag Shortcut eingeben</ion-label>
+            <ion-input [(ngModel)]="flag" placeholder="Flag Shortcut - de"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Gruppe</ion-label>
+            <ion-select [(ngModel)]="group" id="group_select">
+                <ion-option>A</ion-option>
+                <ion-option>B</ion-option>
+                <ion-option>C</ion-option>
+                <ion-option>D</ion-option>
+                <ion-option>E</ion-option>
+                <ion-option>F</ion-option>
+                <ion-option>G</ion-option>
+                <ion-option>H</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <div>
+            <button ion-button (click)="addTeam($event)">Team hinzufügen</button>
+    </div>
+</ion-content>

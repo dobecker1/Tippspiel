@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Gruppen</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">A</ion-item-divider>
+        <ion-item  class="teamItem" *ngFor='let team of groups["A"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">B</ion-item-divider>
+        <ion-item  class="teamItem" *ngFor='let team of groups["B"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">C</ion-item-divider>
+        <ion-item  class="teamItem" *ngFor='let team of groups["C"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">D</ion-item-divider>
+        <ion-item  class="teamItem" *ngFor='let team of groups["D"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">E</ion-item-divider>
+        <ion-item  class="teamItem" *ngFor='let team of groups["E"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>  
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">F</ion-item-divider>
+        <ion-item class="teamItem" *ngFor='let team of groups["F"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">G</ion-item-divider>
+        <ion-item class="teamItem" *ngFor='let team of groups["G"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="groupHeader" color="light">H</ion-item-divider>
+        <ion-item class="teamItem" *ngFor='let team of groups["H"]'><span [ngClass]="team.getFlag()" class="flag-icon"></span>{{team.name}}</ion-item>
+    </ion-item-group>
+
+</ion-content>

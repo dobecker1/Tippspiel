@@ -1,0 +1,31 @@
+<ion-header class="gamesHeader">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Spiele</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="gamesContent">
+    <ion-list inset *ngFor="let date of dates" class="gameList">
+        <ion-list-header class="gamesHeader">
+            {{date.date | date:"dd.MM.yyyy"}}
+        </ion-list-header>
+        <button ion-item class="gameItem" *ngFor="let game of date.games" (click)="gameChoosed($event, game)">
+            <div class="gameDiv">
+                <span [ngClass]="game.getHome().getFlag()" class="flag-icon homeFlag"></span>
+                <div class="homeDiv">{{game.getHome().getName()}}</div>  
+                <div *ngIf="game.getDate().valueOf() < currentDate" class="homePoints">{{game.getGoalsHome()}}</div>  
+                <div *ngIf="game.getDate().valueOf() > currentDate" class="homePoints">-</div>
+            </div>           
+                <!--<div class="pointDiv">:</div> -->
+            <div class="gameDivBottom">
+                <span [ngClass]="game.getGuest().getFlag()" class="flag-icon homeFlag"></span> 
+                <div class="homeDiv">{{game.getGuest().getName()}}</div>
+                <div *ngIf="game.getDate().valueOf() < currentDate" class="guestPoints">{{game.getGoalsGuest()}}</div>
+                <div *ngIf="game.getDate().valueOf() > currentDate" class="guestPoints">-</div>
+            </div>
+        </button>
+    </ion-list>
+</ion-content>

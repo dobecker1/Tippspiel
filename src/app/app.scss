@@ -14,3 +14,67 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.loginContent {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ion-content {
+    background-color: #2ab947 !important;
+}
+
+.usernameItem {
+    background-color: #d2ffb4 !important;
+    margin-left: 16px;
+    padding-left: 16px;
+}
+
+.passwordItem {
+    background-color: #d2ffb4 !important;
+    margin-left: 16px;
+    margin-top: 10px;
+    padding-left: 16px;
+}
+
+.loginBtn {
+    background-color: #d2ffb4 !important;
+    color: black;
+    margin-left: 16px;
+}
+
+.registerBtn {
+    background-color: #d2ffb4 !important;
+    color: black;
+}
+
+.loginHeader {
+    margin-bottom: 10px;
+    background-color: #d2ffb4 !important;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+ion-navbar > div {
+    background-color: #d2ffb4 !important;
+}
+
+.menuItem {
+    background-color: #d2ffb4 !important;
+}
+
+ion-toolbar > div {
+    background-color: #d2ffb4 !important;
+}
+
+.middleContainers {
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.btnLogout {
+    background-color: #d2ffb4 !important;
+    color: black;
+    margin-left: 10px;
+}

@@ -1,0 +1,26 @@
+.playerDiv{
+    display: flex;
+}
+
+.playerName {
+    width: 100px;
+    padding-left: 5px;
+}
+
+.playerPoints {
+    width: 52px;
+    text-align: right;
+}
+
+.playerNumber {
+    width: 30px;
+    text-align: right;
+}
+
+.scoreItem {
+    background-color: #d2ffb4 !important;
+}
+
+.playerItem {
+    background-color: #d2ffb4 !important;
+}
