@@ -13,6 +13,8 @@
             {{date.date | date:"dd.MM.yyyy"}}
         </ion-list-header>
         <button ion-item class="gameItem" *ngFor="let game of date.games" (click)="gameChoosed($event, game)">
+        <div style="display: flex">
+            <div>
             <div class="gameDiv">
                 <span [ngClass]="game.getHome().getFlag()" class="flag-icon homeFlag"></span>
                 <div class="homeDiv">{{game.getHome().getName()}}</div>  
@@ -26,6 +28,9 @@
                 <div *ngIf="game.getDate().valueOf() < currentDate" class="guestPoints">{{game.getGoalsGuest()}}</div>
                 <div *ngIf="game.getDate().valueOf() > currentDate" class="guestPoints">-</div>
             </div>
+            </div>
+            <div class="dateDiv">{{game.getDate() | date: 'HH:mm'}} Uhr</div>
+        </div>
         </button>
     </ion-list>
 </ion-content>
